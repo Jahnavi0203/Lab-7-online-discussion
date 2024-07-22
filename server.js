@@ -3,7 +3,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser'); // Import cookie-parser middleware
 
 const app = express();
-const PORT = 8080; // You can change the port if needed
+const PORT = 8086; // You can change the port if needed
 
 // Middleware to parse JSON and URL encoded data
 app.use(express.json());
