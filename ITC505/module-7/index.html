@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/home">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact</a>
+        <a href="/ITC505/module-7/index.html">Tasks</a>
+    </div>
+    <div class="content">
+        <div class="task-container">
+            <div class="task" data-task-id="1">
+                <span class="task-name">Task 1</span>
+                <button class="btn complete-btn">Complete</button>
+                <button class="btn not-complete-btn">Not Completed</button>
+            </div>
+            <div class="task" data-task-id="2">
+                <span class="task-name">Task 2</span>
+                <button class="btn complete-btn">Complete</button>
+                <button class="btn not-complete-btn">Not Completed</button>
+            </div>
+            <div class="task" data-task-id="3">
+                <span class="task-name">Task 3</span>
+                <button class="btn complete-btn">Complete</button>
+                <button class="btn not-complete-btn">Not Completed</button>
+            </div>
+        </div>
+        <div class="status-list">
+            <h2>HTTP Status Codes</h2>
+            <ul>
+                <li>
+                    <strong>205 Reset Content</strong>
+                    <p>This status code indicates that the server has fulfilled the request and the client should reset
+                        the document view.</p>
+                    <p><em>Situation:</em> A server responds with this code after a successful PUT request to inform the
+                        client that it should reset its view of the document.</p>
+                </li>
+                <li>
+                    <strong>302 Found</strong>
+                    <p>This status code indicates that the requested resource resides temporarily under a different URI.
+                        The client should follow the redirection provided in the <code>Location</code> header.</p>
+                    <p><em>Situation:</em> A user is redirected to a different page or resource temporarily, such as
+                        during a login process or when a URL has been changed.</p>
+                </li>
+                <li>
+                    <strong>405 Method Not Allowed</strong>
+                    <p>This status code indicates that the request method is not allowed for the resource. The server
+                        should include an <code>Allow</code> header specifying the allowed methods.</p>
+                    <p><em>Situation:</em> A client attempts to use a POST method on a resource that only supports GET
+                        requests, resulting in this error code.</p>
+                </li>
+                <li>
+                    <strong>511 Network Authentication Required</strong>
+                    <p>This status code indicates that the client needs to authenticate to gain network access. It is
+                        often used in captive portals.</p>
+                    <p><em>Situation:</em> A user connects to a Wi-Fi network and is redirected to a login page where
+                        they need to authenticate before gaining access to the internet.</p>
+                </li>
+                <li>
+                    <strong>411 Length Required</strong>
+                    <p>This status code indicates that the server refuses to accept the request without a defined
+                        <code>Content-Length</code> header.
+                    </p>
+                    <p><em>Situation:</em> A client sends a request with a method that requires a body, but the request
+                        lacks a <code>Content-Length</code> header, resulting in this error code.</p>
+                </li>
+            </ul>
+        </div>
+        <div id="cookie-result"></div>
+        <button onclick="setCookie()">Set Cookie</button>
+        <button onclick="getCookie()">Get Cookie</button>
+    </div>
+    <script src="cookie-script.js"></script>
+</body>
+
+</html>
